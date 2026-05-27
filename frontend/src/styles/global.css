@@ -1,0 +1,114 @@
+/* ============================================
+   DevOps Copilot — Global Styles
+   Dark terminal aesthetic: GitHub dark + Bloomberg terminal
+   Font: JetBrains Mono (code) + IBM Plex Sans (UI)
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Core backgrounds */
+  --bg-main: #0d1117;
+  --bg-panel: #161b22;
+  --bg-card: #1c2128;
+  --bg-input: #0d1117;
+  --bg-hover: #21262d;
+
+  /* Borders */
+  --border: #30363d;
+  --border-accent: #3fb950;
+
+  /* Accent colors */
+  --green: #3fb950;
+  --green-dim: #238636;
+  --blue: #58a6ff;
+  --yellow: #d29922;
+  --red: #f85149;
+  --purple: #bc8cff;
+  --orange: #e3b341;
+
+  /* Text */
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #484f58;
+  --text-green: #3fb950;
+  --text-blue: #58a6ff;
+
+  /* Fonts */
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --font-ui: 'IBM Plex Sans', system-ui, sans-serif;
+
+  /* Sizing */
+  --header-height: 48px;
+  --sidebar-left-width: 260px;
+  --sidebar-right-width: 260px;
+  --input-height: 64px;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-panel);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Pulse animation for status dot */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Progress bar fill */
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: var(--fill-width); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
