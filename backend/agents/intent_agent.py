@@ -1,9 +1,9 @@
 import json, time
 from groq import Groq
-from backend.models.intent import IntentSpec
-from backend.observability.tracing import get_tracer
-from backend.observability.logging_config import get_logger
-from backend.config import settings
+from models.intent import IntentSpec
+from observability.tracing import get_tracer
+from observability.logging_config import get_logger
+from config import settings
 import asyncio
 
 tracer = get_tracer("intent_agent")   # Teammate 3's tracer

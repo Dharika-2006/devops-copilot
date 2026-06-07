@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional, List
-from backend.models.intent import IntentSpec
+from models.intent import IntentSpec
 
 class ManifestDiff(BaseModel):
     field: str

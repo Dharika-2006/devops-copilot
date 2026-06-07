@@ -1,7 +1,7 @@
 import asyncio
 
-from backend.agents.planner_agent import planner_agent
-from backend.models.intent import IntentSpec
+from agents.planner_agent import planner_agent
+from models.intent import IntentSpec
 
 
 def test_scale_plan():

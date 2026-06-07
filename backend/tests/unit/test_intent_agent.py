@@ -3,7 +3,7 @@ sys.path.insert(0, os.path.abspath(
     os.path.join(os.path.dirname(__file__), "../../..")))
 from dotenv import load_dotenv
 load_dotenv()
-from backend.agents.intent_agent import parse_intent
+from agents.intent_agent import parse_intent
 
 def test_scale_up():
     r = parse_intent("scale my backend to 5 replicas")

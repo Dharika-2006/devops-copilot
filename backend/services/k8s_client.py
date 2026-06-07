@@ -5,7 +5,10 @@ class KubernetesClient:
         try:
             config.load_kube_config()
         except Exception:
-            config.load_incluster_config()
+            try:
+                config.load_incluster_config()
+            except Exception:
+                pass  # no cluster available, running in stub mode
         self.apps_v1 = client.AppsV1Api()
 
     async def scale_deployment(self, name: str, namespace: str, replicas: int):

@@ -1,8 +1,8 @@
 from langgraph.graph import StateGraph, END
-from backend.agents.intent_agent import intent_agent
-from backend.agents.planner_agent import planner_agent
-from backend.agents.safety_agent import safety_agent
-from backend.agents.executor_agent import executor_agent
+from agents.intent_agent import intent_agent
+from agents.planner_agent import planner_agent
+from agents.safety_agent import safety_agent
+from agents.executor_agent import executor_agent
 import uuid
 
 async def run_intent(state):

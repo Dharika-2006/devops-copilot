@@ -1,5 +1,5 @@
-from backend.models.intent import IntentSpec
-from backend.models.plan import (
+from models.intent import IntentSpec
+from models.plan import (
     ExecutionPlan,
     ManifestDiff,
 )

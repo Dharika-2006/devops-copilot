@@ -1,12 +1,12 @@
 import uuid
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
-from backend.db.postgres import get_db
-from backend.db.orm_models import CommandSession
-from backend.models.intent import CommandRequest, CommandResponse
-from backend.agents.intent_agent import parse_intent
-from backend.observability.audit_logger import write_audit_log
-from backend.observability.logging_config import get_logger
+from db.postgres import get_db
+from db.orm_models import CommandSession
+from models.intent import CommandRequest, CommandResponse
+from agents.intent_agent import parse_intent
+from observability.audit_logger import write_audit_log
+from observability.logging_config import get_logger
 
 router = APIRouter()
 logger = get_logger("commands_route")
