@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.db.orm_models import AuditLog
+from db.orm_models import AuditLog
 
 
 async def write_audit_log(

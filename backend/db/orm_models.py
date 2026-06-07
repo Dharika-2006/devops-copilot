@@ -3,7 +3,7 @@ from sqlalchemy.dialects.postgresql import UUID
 import uuid
 import datetime
 
-from backend.db.postgres import Base
+from db.postgres import Base
 
 class CommandSession(Base):
     __tablename__ = "command_sessions"

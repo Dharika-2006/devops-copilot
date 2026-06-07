@@ -2,8 +2,22 @@ from pydantic import BaseModel
 from typing import Literal, Optional
 
 class IntentSpec(BaseModel):
-    action: Literal["scale","deploy","rollback","add_service","remove_service","update_config"]
-    target_type: Literal["deployment","service","configmap","ingress"]
+    action: Literal[
+    "scale",
+    "deploy",
+    "rollback",
+    "add_service",
+    "remove_service",
+    "update_config",
+    "restart",
+    "delete",
+    "expose",
+    "pause",
+    "resume",
+    "get_status" 
+    ]
+    
+    target_type: Literal["deployment","service","configmap","ingress","pod"]
     target_name: str
     namespace: str = "default"
     parameters: dict

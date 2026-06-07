@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import text
 
-from backend.db.postgres import get_db
-from backend.db.redis_client import get_redis
+from db.postgres import get_db
+from db.redis_client import get_redis
 
 router = APIRouter()
 

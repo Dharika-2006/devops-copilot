@@ -3,7 +3,7 @@ import uuid
 
 from starlette.middleware.base import BaseHTTPMiddleware
 
-from backend.observability.logging_config import get_logger
+from observability.logging_config import get_logger
 
 
 logger = get_logger(__name__)
